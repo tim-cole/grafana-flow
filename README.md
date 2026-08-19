@@ -1,12 +1,13 @@
 <img src="https://user-images.githubusercontent.com/1423657/218816262-e0e8d7ad-44d0-4a7d-9497-0d383ed78b83.png" height=150>
 
 # grafana-flow
-Grafana 10+ Flow Diagram Visualization plugin
+Grafana 12.3+ Flow Diagram Visualization plugin (React 19 compatible)
 
 <img src="https://user-images.githubusercontent.com/1423657/259414028-ce4c8603-be1f-4ca9-a0fa-556d84c5660c.gif">
 
 > Designed for [hepic](https://hepic.cloud), [homer](https://sipcapture.org) and [qryn](https://qryn.dev) integrations
 
+> This is a fork of [metrico/grafana-flow](https://github.com/metrico/grafana-flow), updated for compatibility with Grafana 12.3+ / React 19, since the upstream project bundled React 17 and stopped receiving updates.
 
 ## Status
 
@@ -18,8 +19,10 @@ Grafana 10+ Flow Diagram Visualization plugin
 Allow and Install the unsigned plugin, ie:
 ```
 - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=qxip-flow-panel
-- GF_INSTALL_PLUGINS=https://github.com/metrico/grafana-flow/releases/download/v10.1.1/qxip-flow-panel-10.1.1.zip;qxip-flow-panel"
+- GF_INSTALL_PLUGINS=https://github.com/tim-cole/grafana-flow/releases/download/v11.0.0/qxip-flow-panel-11.0.0.zip;qxip-flow-panel"
 ```
+
+> Requires Grafana >=12.3.0. For older Grafana versions (React 17/18), use an upstream release instead.
 
 ### Panel Options
 

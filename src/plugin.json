@@ -6,7 +6,7 @@
 
   "info": {
     "keywords": ["panel"],
-    "description": "Test plugin to lern dev enveroument",
+    "description": "Flow diagram visualization panel for SIP capture / call-flow tooling such as HOMER, HEPIC, and qryn.",
     "author": {
       "name": "qxip"
     },
