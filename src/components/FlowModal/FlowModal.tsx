@@ -52,7 +52,7 @@ export const FlowModal = ({ modalIsOpen, modalData, onModalClose, themeName, ful
                         value={isParsed}
                         onChange={() => { setIsParsed(!isParsed); }}
                         label="Parsed view" />
-                    <IconButton style={{ position: 'absolute', right: '10px', top: '7px' }} name="cog" variant="secondary" onClick={() => setIsParsedViewModalOpen(true)} />
+                    <IconButton style={{ position: 'absolute', right: '10px', top: '7px' }} name="cog" variant="secondary" aria-label="Configure parsed view" onClick={() => setIsParsedViewModalOpen(true)} />
                     <ConfigureParsedViewModal fullData={fullData} dataScheme={dataSchemeValue} setDataSchemeValue={setDataSchemeValue} isModalOpen={isParsedViewModalOpen} onModalClose={onConfigureModalClose} data={modalData} />
                 </span>
             </Tooltip>

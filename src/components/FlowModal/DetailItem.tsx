@@ -2,7 +2,7 @@ import { css } from "@emotion/css";
 import { InlineLabel, useStyles2 } from "@grafana/ui";
 import { CopyText } from "components/CopyText/CopyText";
 import React, { useRef, useState } from "react";
-import ReactJson from "react-json-view";
+import ReactJson from "@microlink/react-json-view";
 const getStyles = () => {
     return {
 
@@ -21,7 +21,7 @@ interface Props {
     theme: string;
     tooltip?: string;
 }
-export const DetailItem = ({ item, theme, tooltip }: Props): JSX.Element | null => {
+export const DetailItem = ({ item, theme, tooltip }: Props): React.JSX.Element | null => {
     let [key, value]: any = item;
     const themeName: any = theme === 'Dark' ? 'railscasts' : 'rjv-default'
     let isJSON = false;

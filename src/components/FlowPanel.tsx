@@ -25,7 +25,7 @@ export interface MyPanelProps extends PanelProps {
 
 type CustomElement<T> = Partial<T & React.DOMAttributes<T> & { children: any }>;
 
-declare global {
+declare module 'react' {
     /* eslint-disable-next-line */
     namespace JSX {
         interface IntrinsicElements {
@@ -180,7 +180,7 @@ export const FlowPanel = (props: MyPanelProps) => {
               border: 1px solid ${themeName === 'Dark' ? 'hsla(240, 18.6%, 83.1%, 0.12)' : 'hsla(210, 12.2%, 16.1%, 0.12)'};
               border-radius: 2px;
               background-color: ${themeName === 'Dark' ? 'hsla(0, 0%, 0%, 0.5)' : 'hsla(0, 0%, 100%, 0.5)'};
-            `)} icon="bars" fill="text" variant="secondary" />
+            `)} icon="bars" fill="text" variant="secondary" aria-label="Menu" />
                     </Dropdown>
                     // </span>/
                 )}

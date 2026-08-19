@@ -12,7 +12,7 @@ interface Props {
     theme: string
     dataScheme: ParsedLabel[]
 }
-export const ParsedView: React.FC<any> = ({ data, theme, dataScheme }: Props): JSX.Element | null => {
+export const ParsedView: React.FC<any> = ({ data, theme, dataScheme }: Props): React.JSX.Element | null => {
     const [values, setValues] = useState<Value[]>([])
     useEffect(() => {
         const labelMap = new Map()
