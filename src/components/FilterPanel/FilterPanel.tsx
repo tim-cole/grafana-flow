@@ -118,7 +118,7 @@ export const FilterPanel = ({ data, onFilter, onSimplify, options }: FilterProps
                   border: 1px solid ${themeName === 'Dark' ? 'hsla(240, 18.6%, 83.1%, 0.12)' : 'hsla(210, 12.2%, 16.1%, 0.12)'};
                   border-radius: 2px;
                   background-color: ${themeName === 'Dark' ? 'hsla(0, 0%, 0%, 0.3)' : 'hsla(0, 0%, 100%, 0.3)'};
-                `)} id="filter" icon="filter" fill="text" variant="secondary" />
+                `)} id="filter" icon="filter" fill="text" variant="secondary" aria-label="Filter" />
         </Toggletip>
 
     )

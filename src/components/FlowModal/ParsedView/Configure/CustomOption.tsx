@@ -2,7 +2,6 @@ import { cx } from '@emotion/css'
 import { getSelectStyles, useTheme2 } from '@grafana/ui'
 import React, { useMemo } from 'react'
 export const CustomOption = ({ isFocused, isSelected, isDisabled, innerProps, ...props }: any) => {
-    console.log(props, innerProps)
     const theme = useTheme2()
     const styles = getSelectStyles(theme)
     const id = innerProps?.id

@@ -1,5 +1,5 @@
 import { cx, css } from "@emotion/css";
-import { Tooltip, InlineSwitch, HorizontalGroup, Checkbox } from "@grafana/ui";
+import { Tooltip, InlineSwitch, Stack, Checkbox } from "@grafana/ui";
 import React from "react";
 import { FilterCollapse } from "./Collapse";
 import { FilterKeys, Filters } from "./FilterPanel";
@@ -36,7 +36,7 @@ export function FilterMenu({ filters, setFilters, isSimplify, setIsSimplify, opt
         {Object.entries(filters).map(([key, filter]) => (
 
             <FilterCollapse key={key} title={filter.title} filterState={filters} label={key} setFilters={setFilters} tooltip={filter.tooltip} >
-                <HorizontalGroup spacing="md" wrap={true}>
+                <Stack direction="row" gap={2} wrap="wrap">
                     {Array.from(filter.values.entries()).map(([label, checked]) => (
                         <Checkbox value={checked} key={label} defaultChecked={true} label={label} onChange={(v) => {
                             setFilters(prevState => {
@@ -53,7 +53,7 @@ export function FilterMenu({ filters, setFilters, isSimplify, setIsSimplify, opt
                             })
                         }}></Checkbox>
                     ))}
-                </HorizontalGroup>
+                </Stack>
             </FilterCollapse>
         ))
 
